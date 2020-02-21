@@ -2,9 +2,8 @@ package com.example.kotlinsample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kotlinsample.data.DataManager
+import com.example.kotlinsample.data.impl.DataManager
 import dagger.android.AndroidInjection
-import dagger.android.DispatchingAndroidInjector
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
