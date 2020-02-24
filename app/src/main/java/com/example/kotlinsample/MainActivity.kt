@@ -14,6 +14,12 @@ class MainActivity : AppCompatActivity() {
         AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        dataManager.printCat()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.container_view, MainFragment())
+        transaction.commit()
     }
 }

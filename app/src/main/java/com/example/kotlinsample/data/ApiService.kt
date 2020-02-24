@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 class ApiService {
     companion object {
         // OkHttp client
-        val okhttpClient = OkHttpClient.Builder()
+        val okHttpClient = OkHttpClient.Builder()
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
@@ -31,7 +31,7 @@ class ApiService {
     fun getApiService(): Retrofit {
         mRetrofit = Retrofit.Builder()
             .client(
-                okhttpClient.build()
+                okHttpClient.build()
             )
             .baseUrl(BuildConfig.BASE_URL)
 //            .addConverterFactory(GsonConverterFactory.create(gson))

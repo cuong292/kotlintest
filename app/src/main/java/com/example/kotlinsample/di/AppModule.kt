@@ -2,7 +2,10 @@ package com.example.kotlinsample.di
 
 import android.content.Context
 import com.example.kotlinsample.App
-import com.example.kotlinsample.data.*
+import com.example.kotlinsample.data.AppApiHelper
+import com.example.kotlinsample.data.AppDBHelper
+import com.example.kotlinsample.data.AppDataManager
+import com.example.kotlinsample.data.AppPrefHelper
 import com.example.kotlinsample.data.impl.ApiHelper
 import com.example.kotlinsample.data.impl.DataManager
 import com.example.kotlinsample.data.impl.DatabaseHelper
@@ -12,7 +15,7 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
-@Module(includes = [ViewModule::class])
+@Module(includes = [ActivityModule::class])
 abstract class AppModule {
 
     @Singleton
