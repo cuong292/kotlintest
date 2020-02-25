@@ -1,8 +1,7 @@
 package com.example.kotlinsample.data
 
 import android.content.Context
-import android.widget.Toast
-import com.example.kotlinsample.data.impl.ApiHelper
+import com.example.kotlinsample.data.dataInterface.ApiHelper
 import javax.inject.Inject
 import javax.inject.Singleton
 

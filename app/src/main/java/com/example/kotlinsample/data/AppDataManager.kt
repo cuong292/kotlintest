@@ -1,11 +1,13 @@
 package com.example.kotlinsample.data
 
-import com.example.kotlinsample.data.impl.ApiHelper
-import com.example.kotlinsample.data.impl.DataManager
-import com.example.kotlinsample.data.impl.DatabaseHelper
-import com.example.kotlinsample.data.impl.PrefHelper
+import com.example.kotlinsample.data.dataInterface.ApiHelper
+import com.example.kotlinsample.data.dataInterface.DataManager
+import com.example.kotlinsample.data.dataInterface.DatabaseHelper
+import com.example.kotlinsample.data.dataInterface.PrefHelper
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class AppDataManager @Inject constructor(
     private val dbHelper: DatabaseHelper,
     private val apiHelper: ApiHelper,

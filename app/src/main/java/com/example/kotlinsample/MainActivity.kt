@@ -1,8 +1,9 @@
 package com.example.kotlinsample
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kotlinsample.data.impl.DataManager
+import com.example.kotlinsample.data.dataInterface.DataManager
 import dagger.android.AndroidInjection
 import javax.inject.Inject
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        Toast.makeText(this, dataManager.toString(), Toast.LENGTH_SHORT).show()
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.container_view, MainFragment())
         transaction.commit()
