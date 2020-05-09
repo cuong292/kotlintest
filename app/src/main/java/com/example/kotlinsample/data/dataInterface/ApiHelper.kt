@@ -1,5 +1,8 @@
 package com.example.kotlinsample.data.dataInterface
 
-interface ApiHelper {
+import com.google.gson.JsonElement
+import retrofit2.Call
 
+interface ApiHelper {
+    fun getData(): Call<JsonElement>
 }

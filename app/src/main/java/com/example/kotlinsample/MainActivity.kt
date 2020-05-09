@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Toast.makeText(this, dataManager.toString(), Toast.LENGTH_SHORT).show()
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.container_view, MainFragment())
         transaction.commit()
